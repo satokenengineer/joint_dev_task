@@ -6,7 +6,7 @@ def q1
 
   # 以下に回答を記載
   names<<"斎藤"
-  puts names
+  p names
 end
 
 def q2
@@ -15,7 +15,7 @@ def q2
 
   # 以下に回答を記載
   array = array1 + array2
-  puts array
+  p array
 end
 
 def q3
@@ -29,7 +29,7 @@ def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-  sports.delete(nil)
+  sports = sports.compact
   # 以下は変更しないで下さい
   p sports
 end
