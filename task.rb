@@ -117,9 +117,7 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-  # update_data.each do |k,v|
-  #  puts k,v
-  # end
+  p user_data.merge!(update_data)
 end
 
 def q14
