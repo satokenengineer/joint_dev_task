@@ -38,8 +38,8 @@ def q5
   array1 = []
   array2 = [1, 5, 8, 10]
 
-  # 以下に回答を記載 
-    p array1.empty? 
+  # 以下に回答を記載
+    p array1.empty?
     p array2.empty?
 end
 
@@ -48,7 +48,11 @@ def q6
 
   # 以下に回答を記載
   numbers2 = numbers1.map { |number| number * 10 }
+<<<<<<< HEAD
     p numbers2
+=======
+  p numbers2
+>>>>>>> 47e5375 (Ruby課題6・7修正、Ruby課題8〜12提出)
 end
 
 def q7
@@ -64,7 +68,11 @@ def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
+<<<<<<< HEAD
   programming_languages.map!(&:capitalize)
+=======
+  programming_languages = programming_languages.map(&:capitalize)
+>>>>>>> 47e5375 (Ruby課題6・7修正、Ruby課題8〜12提出)
   upper_case_programming_languages = programming_languages.map(&:upcase)
 
   # 以下は変更しないで下さい
@@ -77,7 +85,11 @@ def q9
 
   # 以下に回答を記載
   names.each.with_index(1) do |name, i|
+<<<<<<< HEAD
     puts "会員No.#{i}#{name}さん"
+=======
+  puts "会員No.#{i}#{name}さん"
+>>>>>>> 47e5375 (Ruby課題6・7修正、Ruby課題8〜12提出)
   end
 end
 
@@ -88,9 +100,15 @@ def q10
 
   foods.each do |food|
     if food.include?("うに")
-      puts "好物です" 
-    else  
+<<<<<<< HEAD
+      puts "好物です"
+    else
       puts "まぁまぁ好きです"
+=======
+    puts "好物です" 
+    else  
+    puts "まぁまぁ好きです"
+>>>>>>> 47e5375 (Ruby課題6・7修正、Ruby課題8〜12提出)
     end
   end
 end
@@ -99,8 +117,13 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-    puts "ユーザーの趣味一覧"  
+<<<<<<< HEAD
+    puts "ユーザーの趣味一覧"
   sports.flatten.uniq!.each.with_index(1)do |sport,i|
+=======
+  puts "ユーザーの趣味一覧"  
+    sports.flatten.uniq!.each.with_index(1)do |sport,i|
+>>>>>>> 47e5375 (Ruby課題6・7修正、Ruby課題8〜12提出)
     puts "No#{i}#{sport}"
   end
 end
@@ -109,7 +132,11 @@ def q12
   data = { user: { name: "satou", age: 33 } }
 
   # 以下に回答を記載
+<<<<<<< HEAD
     puts data[:user][:name]
+=======
+  puts data[:user][:name]
+>>>>>>> 47e5375 (Ruby課題6・7修正、Ruby課題8〜12提出)
 end
 
 def q13
@@ -117,7 +144,13 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
+<<<<<<< HEAD
     p user_data.merge!(update_data)
+=======
+  # update_data.each do |k,v|
+  #  puts k,v
+  # end
+>>>>>>> 47e5375 (Ruby課題6・7修正、Ruby課題8〜12提出)
 end
 
 def q14
@@ -131,10 +164,10 @@ def q15
   data1 = { name: "saitou", hobby: "soccer", age: 33, role: "admin" }
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
-  # 以下に回答を記載  
+  # 以下に回答を記載
   puts data1.key?(:age) ? "OK" : "NG"
-  puts data2.key?(:age) ? "OK" : "NG"   
-  
+  puts data2.key?(:age) ? "OK" : "NG"
+
 end
 
 def q16
@@ -154,7 +187,17 @@ end
 
 class UserQ17
   # 以下に回答を記載
+  def initialize(name:, age:, gender:)
+    @name = name
+    @age = age
+    @gender = gender
+  end
 
+  def info
+    puts "名前：#{@name}"
+    puts "年齢：#{@age}"
+    puts "性別：#{@gender}"
+  end
 end
 
 def q17
