@@ -186,15 +186,16 @@ class UserQ18
   # 以下に回答を記載
   def initialize(name:,age:)
     @name = name
-    @age = age
+    @adult = age
   end
 
   def introduce
-    if @age == 32
-      puts "こんにちは，#{@name}と申します。宜しくお願いいたします。"
+    if @adult >= 18
+      print  "こんにちは，#{@name}と申します。宜しくお願いいたします。"
     else
-      puts "はいさいまいど〜，#{@name}です！！！"
+      print "はいさいまいど〜，#{@name}です！！！"
     end
+    # print @adult >= 18 ? "こんにちは，#{@name}と申します。宜しくお願いいたします。" : "はいさいまいど〜，#{@name}です！！！"
   end
 end
 
