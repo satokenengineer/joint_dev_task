@@ -48,11 +48,9 @@ def q6
 
   # 以下に回答を記載
   numbers2 = numbers1.map { |number| number * 10 }
-<<<<<<< HEAD
     p numbers2
-=======
-  p numbers2
->>>>>>> 47e5375 (Ruby課題6・7修正、Ruby課題8〜12提出)
+    p numbers2
+
 end
 
 def q7
@@ -68,11 +66,8 @@ def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
-<<<<<<< HEAD
   programming_languages.map!(&:capitalize)
-=======
   programming_languages = programming_languages.map(&:capitalize)
->>>>>>> 47e5375 (Ruby課題6・7修正、Ruby課題8〜12提出)
   upper_case_programming_languages = programming_languages.map(&:upcase)
 
   # 以下は変更しないで下さい
@@ -85,11 +80,8 @@ def q9
 
   # 以下に回答を記載
   names.each.with_index(1) do |name, i|
-<<<<<<< HEAD
     puts "会員No.#{i}#{name}さん"
-=======
   puts "会員No.#{i}#{name}さん"
->>>>>>> 47e5375 (Ruby課題6・7修正、Ruby課題8〜12提出)
   end
 end
 
@@ -100,15 +92,9 @@ def q10
 
   foods.each do |food|
     if food.include?("うに")
-<<<<<<< HEAD
       puts "好物です"
     else
       puts "まぁまぁ好きです"
-=======
-    puts "好物です" 
-    else  
-    puts "まぁまぁ好きです"
->>>>>>> 47e5375 (Ruby課題6・7修正、Ruby課題8〜12提出)
     end
   end
 end
@@ -117,13 +103,8 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-<<<<<<< HEAD
-    puts "ユーザーの趣味一覧"
-  sports.flatten.uniq!.each.with_index(1)do |sport,i|
-=======
   puts "ユーザーの趣味一覧"  
     sports.flatten.uniq!.each.with_index(1)do |sport,i|
->>>>>>> 47e5375 (Ruby課題6・7修正、Ruby課題8〜12提出)
     puts "No#{i}#{sport}"
   end
 end
@@ -132,11 +113,7 @@ def q12
   data = { user: { name: "satou", age: 33 } }
 
   # 以下に回答を記載
-<<<<<<< HEAD
-    puts data[:user][:name]
-=======
   puts data[:user][:name]
->>>>>>> 47e5375 (Ruby課題6・7修正、Ruby課題8〜12提出)
 end
 
 def q13
@@ -144,13 +121,7 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-<<<<<<< HEAD
-    p user_data.merge!(update_data)
-=======
-  # update_data.each do |k,v|
-  #  puts k,v
-  # end
->>>>>>> 47e5375 (Ruby課題6・7修正、Ruby課題8〜12提出)
+  p user_data.merge!(update_data)
 end
 
 def q14
@@ -167,7 +138,6 @@ def q15
   # 以下に回答を記載
   puts data1.key?(:age) ? "OK" : "NG"
   puts data2.key?(:age) ? "OK" : "NG"
-
 end
 
 def q16
@@ -194,9 +164,11 @@ class UserQ17
   end
 
   def info
-    puts "名前：#{@name}"
-    puts "年齢：#{@age}"
-    puts "性別：#{@gender}"
+    puts <<~TEXT
+      名前：#{@name}
+      年齢：#{@age}
+      性別：#{@gender}
+    TEXT
   end
 end
 
@@ -212,7 +184,18 @@ end
 
 class UserQ18
   # 以下に回答を記載
+  def initialize(name:,age:)
+    @name = name
+    @age = age
+  end
 
+  def introduce
+    if @age == 32
+      puts "こんにちは，#{@name}と申します。宜しくお願いいたします。"
+    else
+      puts "はいさいまいど〜，#{@name}です！！！"
+    end
+  end
 end
 
 def q18
@@ -223,6 +206,7 @@ def q18
   puts user1.introduce
   puts user2.introduce
 end
+
 
 class Item
   # 以下を修正して下さい
