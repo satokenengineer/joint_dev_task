@@ -191,11 +191,10 @@ class UserQ18
 
   def introduce
     if @adult >= 18
-      print  "こんにちは，#{@name}と申します。宜しくお願いいたします。"
+      "こんにちは，#{@name}と申します。宜しくお願いいたします。"
     else
-      print "はいさいまいど〜，#{@name}です！！！"
+      "はいさいまいど〜，#{@name}です！！！"
     end
-    # print @adult >= 18 ? "こんにちは，#{@name}と申します。宜しくお願いいたします。" : "はいさいまいど〜，#{@name}です！！！"
   end
 end
 
@@ -207,13 +206,14 @@ def q18
   puts user1.introduce
   puts user2.introduce
 end
-
-
 class Item
   # 以下を修正して下さい
-
-  def initialize(name)
+  def initialize (name:)
     @name = name
+  end
+
+  def name
+    " #{@name}"
   end
 end
 
@@ -222,14 +222,26 @@ def q19
   book = Item.new(name: "ゼロ秒思考")
   puts book.name
 end
-
 class UserQ20
   # 以下に回答を記載
+#   def initialize(name:,age:)
+#     @name = {name:}
+#     @adult = {age:}
+#   end
 
-end
+#   def introduce
+#     if @adult >= 18
+#       print  "#{@name}さんの入場料金は 0 円です。"
+#     else
+#       print "#{@name}さんの入場料金は 0 円です。"
+#     end
+#   end
 
-class Zoo
-  # 以下に回答を記載
+# end
+
+# # class Zoo
+# #   # 以下に回答を記載
+
 
 end
 
