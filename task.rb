@@ -238,7 +238,7 @@ class Zoo
   end
 
   def info_entry_fee(user)
-    case user.age
+    fee = case user.age
     when 0 .. 5 
       fee = @entry_fee[:infant]
     when 6 .. 12 
